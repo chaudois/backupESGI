@@ -1,0 +1,15 @@
+State : permet à une variable de faire changer le comportement des plusieurs objet
+
+Adapter : 
+
+singleton : instance unique d'une classe accessible à tous qui renvoie toujours la meme chose ( attention, ne marche pas en mode thread async) pratique pour instancier les class au démarage ( IOC )
+
+Observer : insertion d'une classe dans une autre pour trigger des evenement dans une classe en fonction du fonctionnement d'une autre :
+	une classe possède une liste d'observer
+	à chaque changement d'état on fait appel à update sur tout les element de la liste d'observer
+	chaque observer va avoir son comportement vis à vis de sa methode update
+	la fonction update peut prendre un parametre qui peut recevoir l'apeleur de cet update ( ex : foreach(var item in observer ){item.update(this)})
+
+Iterator : un objet possedant une liste d'objet, qui retourne un gestionnaire de liste quand on appel getIterator. ce gestionnaire de liste peut par exemple implementer IIterator. cela permet de gerer plusieur type de liste avec le meme code
+
+Momento : 
